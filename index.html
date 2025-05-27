@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snake the game</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+</head>
+<!--Body-->
+<body>
+<div class="statsGame">
+    <p><img src="./assets/nutrition_24dp_F43F5E_FILL0_wght400_GRAD0_opsz24.svg" alt="score"><span id="score"></span></p>
+    <p><img src="./assets/trophy_24dp_FFFF55_FILL0_wght400_GRAD0_opsz24.svg" alt="level"><span id="level"></span></p>
+    <p><img src="./assets/favorite_24dp_EA3323_FILL0_wght400_GRAD0_opsz24.svg" alt="lives"><span id="lives"></span></p>
+</div>
+<canvas id="game-canvas" width="400" height="400"></canvas>
+
+<div class="buttons">
+    <button id="start-btn"><span class="material-icons">play_arrow</span></button>
+    <button id="pause-btn"><span class="material-icons">pause</span></button>
+    <button id="restart-btn"><span class="material-icons">refresh</span></button>
+    <button id="settings-btn"><span class="material-icons">settings</span></button>
+</div>
+<dialog id="startGameDialog">
+    <form method="dialog">
+        <label for="difficulty">Choose a difficulty:</label>
+        <select name="difficulty" id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <div class="checkbox"><label for="walls-option">Wall: </label><input id="walls-option" type="checkbox"></div>
+        <button type="submit" id="submitDifficulty">Validate</button>
+    </form>
+
+</dialog>
+<dialog id="loseDialog">
+
+    <form method="dialog">
+        <p>You lose with <em id="endScorePoint"></em> points</p>
+        <button id="winResetRandom">Game Over</button>
+    </form>
+
+</dialog>
+</body>
+</html>
